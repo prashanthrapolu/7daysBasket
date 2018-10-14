@@ -1,0 +1,95 @@
+<!--
+  Generated template for the AddressModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content style="    background: transparent;">
+
+</ion-content>
+
+<ion-footer style="height: 55%;    background: white;">
+
+  <ion-list *ngIf="!edit">
+
+    <ion-item>
+      <ion-row>
+        <ion-col class="p-17" col-8>
+          <p>Select Deliver Address</p>
+        </ion-col>
+        <ion-col>
+          <button ion-button (click)="done()" clear style=" float: right;">Done</button>
+
+        </ion-col>
+        <ion-col>
+          <img src="assets/imgs/ic_close.png" float-right (click)="close()">
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+    <ion-row>
+      <ion-col style="top: 30px;">
+        <ion-radio checked="true" value="go"></ion-radio>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col class="p-l" col-10>
+        {{address.name}}
+      </ion-col>
+      <ion-col>
+        <!-- <p style="color: #fda266" (click)="anotheraddr()">Edit</p> -->
+      </ion-col>
+      <ion-col col-12 class="p-l">
+        {{address.email}}
+      </ion-col>
+      <ion-col col-12 class="p-l">
+        <p>{{address.addr}} {{address.str}}</p>
+      </ion-col>
+      <ion-col col-12 class="p-l">{{address.pin}}</ion-col>
+      <ion-col class="p-l">{{address.mobile}}</ion-col>
+    </ion-row>
+    <ion-item>
+      <ion-label text-center style="color: #fda266" (click)="another()">
+        Add Another Address
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="edit">
+    <ion-item>
+      <ion-row>
+        <ion-col class="p-17" col-8>
+          <p>Edit Address</p>
+        </ion-col>
+        <ion-col>
+          <button ion-button (click)="done()" clear style="    float: right;">Done</button>
+        </ion-col>
+        <ion-col>
+          <img src="assets/imgs/ic_close.png" float-right (click)="close()">
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+    <div class="p-5 b-solid">
+      <ion-input type="text" [(ngModel)]="address.name"></ion-input>
+    </div>
+    <div class="p-5 b-solid">
+      <ion-input type="text" [(ngModel)]="address.email"></ion-input>
+    </div>
+    <div class="p-5 b-solid">
+      <ion-input type="text" [(ngModel)]="address.addr"></ion-input>
+    </div>
+    <div class="p-5 b-solid">
+      <ion-input type="text" [(ngModel)]="address.str"></ion-input>
+    </div>
+    <div class="p-5 b-solid">
+      <ion-input type="text" [(ngModel)]="address.pin"></ion-input>
+    </div>
+    <div class="p-5 b-solid">
+      <ion-input type="text" [(ngModel)]="address.mobile"></ion-input>
+      <!-- <button ion-button>Update</button> -->
+    </div>
+  </div>
+</ion-footer>

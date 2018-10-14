@@ -1,0 +1,23 @@
+
+
+<ion-content padding>
+  <div text-center>
+    <img src="assets/imgs/logo.png" height="190">
+  </div> 
+  <form #loginForm="ngForm" novalidate>
+  
+    <ion-input class="f-20" type="text" [(ngModel)]="mno" name="login.MNumber" #MNumber="ngModel"  placeholder="Mobile Number" text-center></ion-input>
+
+ <div text-right class="p-l-89" (click)="referral()" >
+   <p style="color:#fda266">Have Referal Code ?</p>
+ </div>
+ 
+ <div class="p-t-35  ">
+   <button ion-button color="Primary" class="b-r-0 h " block (click)="onLogin(loginForm)">LOGIN</button>
+ </div>
+ <p ion-text [hidden]="MNumber.valid || submitted == false" color="danger" padding-left>
+    Mobile Number is required
+  </p>
+ </form>
+
+</ion-content>

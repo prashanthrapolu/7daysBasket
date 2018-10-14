@@ -1,0 +1,64 @@
+<!--
+  Generated template for the LatestHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lightg">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Latest</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+
+  <ion-slides>
+    <ion-slide>
+      <img src="assets/imgs/Home.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/Home3.jpg" class="w-100">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/Home2.jpg" class="w-100">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-label class="c_secondary" text-center>Combo Offer</ion-label>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-slides slidesPerView="2.2">
+    <ion-slide *ngFor="let item of fruits">
+      <ion-card>
+        <img src="assets/imgs/{{item.img}}" style="height: 131px;">
+        <p style="color: #758d42">{{item.name}}</p>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <div text-center>
+
+    <h2 class="c_secondary">SORT BY CATEGORY</h2>
+  </div>
+  <ion-row>
+    <ion-col col-6 *ngFor="let item of sort" no-padding>
+      <ion-card>
+        <img src="assets/imgs/{{item.img}}" (click)="fruit(item)" class="h-2">
+        <p style="color: #758d42" text-center>{{item.name}}</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <div text-center>
+    <h2 class="c_secondary">Recommened For You</h2>
+  </div>
+  <ion-row>
+    <ion-col col-4 *ngFor="let i of [1,2,3]">
+      <img src="assets/imgs/dry1.jpg">
+      <p text-center>Exotic Fruits</p>
+    </ion-col>
+  </ion-row>
+</ion-content>

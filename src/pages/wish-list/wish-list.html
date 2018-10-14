@@ -1,0 +1,105 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lightg">
+    <ion-title>WishList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <!-- <ion-grid>
+    <ion-row>
+
+      <ion-col col-6>
+        <ion-card>
+          <img src="assets/imgs/ic_favorite_red.png" class="imgheart">
+          <img src="assets/imgs/veg1.jpg" height="50">
+          <p>Tomato</p>
+          <del>
+            <p>50 Rs</p>
+          </del>
+          <img src="assets/imgs/ic_addtocart.png" class="h-w-25">
+          <p>35 Rs</p>
+          
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <img src="assets/imgs/ic_favorite_red.png" class="imgheart">
+        <!-- <img src="assets/imgs/veg1.jpg"  height="50"> -->
+  <!-- <p>Tomato</p>
+        <del>
+          <p>50 Rs</p>
+        </del>
+        <p>35 Rs</p>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid> -->
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/imgs/ic_favorite_red.png" style="height: 20px;width: 20px; float: right;">
+        <img src="assets/imgs/veg1.jpg">
+        <ion-col no-padding>
+          <p>Tomato</p>
+          <del>
+            <p>
+              50
+            </p>
+          </del>
+          <p>35</p>
+        </ion-col>
+        <ion-col no-padding text-right>
+          <img src="assets/imgs/ic_addtocart.png" class="h-w-25">
+          <img src="assets/imgs/ic_remove.png" class="h-w">
+          <p class="num">25</p>
+          <img src="assets/imgs/ic_add.png" class="h-w">
+        </ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 no-margin *ngFor="let item of array.ListFruits">
+          <ion-card *ngIf="item.wish" class="full-width" no-margin>
+            <img src="assets/imgs/ic_favorite_green.png" class="h-w-20 float-right" *ngIf="item.key" (click)="item.key=!item.key" (click)="wish()">
+            <img src="assets/imgs/ic_favorite_red.png" class="h-w-20 float-right" *ngIf="!item.key" (click)="item.key=!item.key" (click)="wish()">
+            <img class="h-w-106" *ngIf="item.value" src="assets/imgs/{{item.veg}}">
+            <ion-card-content class="p-5">
+              <p>{{item.name}}</p>
+              <del>
+                <p>25 Rs</p>
+              </del>
+              <p>10</p>
+              <ion-col>
+                <img src="assets/imgs/ic_addtocart.png" class="h-w-25">
+              </ion-col>
+              <ion-row class="row-right">
+                <ion-col (click)="decrement(item)">
+                  <img src="assets/imgs/ic_remove.png" class="h-w-25">
+                </ion-col>
+                <ion-col>
+                  <p class="h-w-25" style="position: absolute">{{item.counter}}</p>
+                </ion-col>
+                <ion-col (click)="increment(item)">
+                  <img src="assets/imgs/ic_add.png" class="h-w-25">
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

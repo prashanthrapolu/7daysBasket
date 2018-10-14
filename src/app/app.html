@@ -1,0 +1,24 @@
+<ion-menu [content]="content" id="myMenu">
+
+
+  <ion-content>
+    <ion-list no-lines class="sidemenu">
+      <ion-item  class="sidemenu" no-lines menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      
+        <ion-row>
+          <ion-col col-2 class="p-2">
+            <img class="height-w-25" src="assets/imgs/{{p.icon}}">
+          </ion-col>
+          <ion-col no-padding>
+            <p class="p-5"> {{p.title}}</p>
+          </ion-col>
+        </ion-row>
+     
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

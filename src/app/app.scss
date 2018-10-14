@@ -1,0 +1,98 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+ion-content{
+    background: url('../assets/imgs/bg_android.png');
+}
+.p-t-35{
+    padding-top: 35px;
+}
+.b-r-0{
+    border-radius: 0px !important;
+}
+.h{
+  height: 50px;
+}
+.p-t-14{
+    padding-top: 14px;
+}
+
+p-l-89{
+    padding-left: 89px !important;
+}
+.content{
+    color:   #758d42;
+    background-color: #fff;
+}
+.c_secondary{
+    color:   #758d42;
+}
+.f-20{
+    font-size: 20px;
+}
+.menu{
+    background-color: transparent !important;
+    }
+.p-20{
+    padding: 20px;
+} 
+.p-2{
+    padding: 2px;
+}
+.p-17{
+    padding: 17px;
+}   
+.p-10{
+    padding: 10px;
+}
+.height-w-25{
+    height: 25px; 
+    width: 25px;
+}
+.p-t-22{
+    padding-top: 22px;
+}
+.sidemenu{
+    background: transparent;
+}
+.p-5{
+    padding: 5px;
+}
+.ion-content.menu{	
+	.ion-list {
+		.item {
+			background-color: transparent !important;
+		}
+	}
+}
+
+////  fonts start ////
+@font-face {
+    font-family: "ptsansnormal";
+    src: url("../assets/fonts/Raleway-Medium.ttf")     
+  }
+
+  @font-face {
+    font-family: "ptsansbold";
+    src : url("../assets/fonts/Raleway-Bold.ttf")
+  }
+
+  *{
+    font-family: "ptsansnormal";
+  }
+
+  //////  fonts end ////
+  

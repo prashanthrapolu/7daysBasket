@@ -1,0 +1,35 @@
+page-wallet {
+.bg-transprant{
+    background: transparent;
+    ion-app .scroll-content{
+ padding: 0px; 
+    }
+
+}
+
+
+}
+.sub-category {
+    background-color: transparent !important;
+    // color: color($colors, l-grey, base) !important;
+    color: rgb(26, 105, 10) !important;
+}
+
+.selected-main-cat {
+    font-weight: bold;
+    color: rgb(52, 202, 77) !important;
+}
+
+.selected-cat{
+    // color: color($colors, dark, base) !important;
+    color: #51CCBB !important;
+    font-weight: bold;
+    // border-bottom: 2px solid #51CCBB;   
+}
+ion-app.md [padding] .scroll-content {
+    padding: 24px;
+}
+.scroll-content{
+    padding: 24px;
+}
+

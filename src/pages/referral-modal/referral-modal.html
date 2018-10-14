@@ -1,0 +1,32 @@
+<!--
+  Generated template for the ReferralModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+
+<ion-content class="mymodal" text-center>
+
+  <ion-list>
+
+    <ion-item>
+      <img class="close" src="assets/imgs/ic_close.png" text-right (click)="close()">
+
+      <h3 text-center style="color:#758d42 ">Apply Reffral Code</h3>
+    </ion-item>
+    <form>
+      <div style="padding-left: 65px;" text-center>
+        <ion-input class="w-50 bg-w " style="color: #758d42" [(ngModel)]="referral" name="referral" type="text" text-center></ion-input>
+        <p style="color:red" text-right [hidden]="referral" >Apply Valid Code</p>
+      </div>
+
+      <div class="p-t-14">
+        <button class="btn-color " ion-button block (click)="apply()">Apply</button>
+      </div>
+    </form>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,119 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lightg">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/veg1.jpg" class="img-r prof-pic">
+        </ion-thumbnail>
+        <h2 class="color-g">{{names.name}}</h2>
+        <p class="color-g">{{names.mobile}}</p>
+        <button ion-button outline item-end (click)="edit()">Edit Profile</button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-list>
+
+    <ion-item (click)="wallet()">
+      <ion-row>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_wallet.png" height="30">
+        </ion-col>
+        <ion-col col-6>
+          <p class="p-14">My Wallet</p>
+        </ion-col>
+        <ion-col>
+          <p class="color-g"> Rs 26</p>
+          <p class="color-g">Available</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+    <ion-item (click)="referral()">
+      <ion-row>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_referral_code.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">Referral Code</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item (click)="trolley()">
+      <ion-row no-padding no-margin>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_shopping_trolly.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">Shopping Trolley</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item (click)="order()">
+      <ion-row no-padding no-margin>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_order_summary.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">Order Summary</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item (click)="wish()">
+      <ion-row no-padding no-margin>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_unfavorite.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">Wish List</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item (click)="feedback()">
+      <ion-row no-padding no-margin>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_feedback.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">Feedback</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item (click)="terms()">
+      <ion-row no-padding no-margin>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_tearm_condition.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">Terms & Condition</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item (click)="about()">
+      <ion-row no-padding no-margin>
+        <ion-col col-3 class="p-l-25">
+          <img src="assets/imgs/ic_about_us.png" height="30">
+        </ion-col>
+        <ion-col col-9>
+          <p class="p-14">About Us</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+
+  </ion-list>
+</ion-content>

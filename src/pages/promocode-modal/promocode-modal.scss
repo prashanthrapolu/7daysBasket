@@ -1,0 +1,30 @@
+page-promocode-modal {
+    .mymodal{
+        height: 30%;
+        width: 75%;
+        top: 22%;
+        left: 15%;
+        }
+       .close{
+        position: absolute;
+        /* left: 2px; */
+        right: -3px;
+        top: -2px;
+       }
+       ion-content {
+       background:none;
+    }
+    .btn-color{
+       background:  #799138
+    }
+    .text-input .text-input{
+        border: 1px solid #799138;
+        width: 50%;
+    }
+    .bg-w{
+        border: 1px solid #799138;
+        width: 65%;
+        height: 30px;
+    }
+    
+}

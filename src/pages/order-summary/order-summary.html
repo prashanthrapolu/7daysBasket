@@ -1,0 +1,32 @@
+<!--
+  Generated template for the OrderSummaryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="lightg">
+    <ion-title>Order Summary</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-list>
+    <ion-item (click)="order()">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/total.jpg">
+      </ion-thumbnail>
+      <h2>OrderNo.32545441</h2>
+      <!-- <p>25 May 2018 04:25PM</p> -->
+      <p>{{myDate}}</p>
+      <p>Transation Id:12314152652</p>
+      <p>Your Order is Sucessfull</p>
+      <p item-end class="price" style="font-family: ptsansbold">{{rate}}Rs</p>
+      <button ion-button outline item-end>Repeat</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
